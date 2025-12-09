@@ -41,13 +41,20 @@
                 <p class="project-subtitle" id="project-subtitle">Project description goes here.</p>
             </header>
 
-            <!-- Video -->
-            <section class="video-section">
-                <div class="video-wrapper">
+            <!-- Video or Highlights -->
+            <section class="video-section" id="media-section">
+                <div class="video-wrapper" id="video-wrapper">
                     <video controls id="project-video">
                         <source src="" type="video/mp4" id="video-source">
                         Your browser does not support the video tag.
                     </video>
+                </div>
+                <div class="highlights-wrapper" id="highlights-wrapper" style="display: none;">
+                    <div class="highlights-card">
+                        <h3><i class="fas fa-star"></i> Key Features</h3>
+                        <ul class="highlights-list" id="highlights-list">
+                        </ul>
+                    </div>
                 </div>
             </section>
 
@@ -76,6 +83,47 @@
     <script>
         // Project data
         const projects = {
+            'spark-proxy': {
+                badge: { icon: 'fas fa-server', text: 'Platform Engineering' },
+                title: 'Spark <span>Proxy</span>',
+                subtitle: 'A Kubernetes-native HTTP proxy for managing Apache Spark applications using the Spark Operator. Features built-in authentication, job versioning, observability, and a web dashboard for seamless Spark job management at scale.',
+                video: null,
+                poster: null,
+                actions: [
+                    { type: 'primary', icon: 'fas fa-building', text: 'Internal Project @ Groww', url: '#' }
+                ],
+                tech: ['Go', 'Kubernetes', 'Apache Spark', 'REST API', 'Prometheus', 'JWT Auth', 'MySQL'],
+                isWorkProject: true,
+                highlights: [
+                    'Job submission, versioning, and conflict detection with automatic hash-based naming',
+                    'JWT & API Key authentication with role-based access control',
+                    'Dynamic allocation support for automatic executor scaling',
+                    'Database storage for failed job tracking and historical analysis',
+                    'Prometheus metrics and structured logging for observability',
+                    'Web UI dashboard with real-time job status and log viewing',
+                    'Secret management and PVC configuration for secure data handling',
+                    'Advanced K8s scheduling: node selectors, tolerations, and affinity rules'
+                ]
+            },
+            'spark-operator': {
+                badge: { icon: 'fab fa-github', text: 'Open Source Contribution' },
+                title: 'Kubeflow <span>Spark Operator</span>',
+                subtitle: 'Contributed to the official Kubeflow Spark Operator by adding SparkApplication name validation for DNS-1035 format compliance. This prevents applications with invalid names from being accepted and failing during reconciliation.',
+                video: null,
+                poster: 'https://avatars.githubusercontent.com/u/33164907?s=400',
+                actions: [
+                    { type: 'primary', icon: 'fas fa-code-merge', text: 'View Merged PR #2711', url: 'https://github.com/kubeflow/spark-operator/pull/2711' },
+                    { type: 'secondary', icon: 'fab fa-github', text: 'Spark Operator Repo', url: 'https://github.com/kubeflow/spark-operator' }
+                ],
+                tech: ['Go', 'Kubernetes', 'Webhook Validation', 'DNS-1035', 'Unit Testing'],
+                isOpenSource: true,
+                highlights: [
+                    'Added webhook validation using Kubernetes built-in validation.IsDNS1035Label()',
+                    'Prevents stale resources in K8s cluster due to invalid SparkApp names',
+                    'Integrated validation into ValidateCreate() and ValidateUpdate() handlers',
+                    '+170 lines added, 4 files changed, merged into master'
+                ]
+            },
             'smart-parking': {
                 badge: { icon: 'fas fa-microchip', text: 'IoT Project' },
                 title: 'Smart Parking <span>System</span>',
@@ -163,12 +211,27 @@
             document.getElementById('project-title').innerHTML = project.title;
             document.getElementById('project-subtitle').textContent = project.subtitle;
 
-            // Update video
-            const video = document.getElementById('project-video');
-            const videoSource = document.getElementById('video-source');
-            video.poster = project.poster;
-            videoSource.src = project.video;
-            video.load();
+            // Update video or highlights
+            const videoWrapper = document.getElementById('video-wrapper');
+            const highlightsWrapper = document.getElementById('highlights-wrapper');
+            
+            if (project.video) {
+                const video = document.getElementById('project-video');
+                const videoSource = document.getElementById('video-source');
+                video.poster = project.poster;
+                videoSource.src = project.video;
+                video.load();
+                videoWrapper.style.display = 'block';
+                highlightsWrapper.style.display = 'none';
+            } else if (project.highlights) {
+                videoWrapper.style.display = 'none';
+                highlightsWrapper.style.display = 'block';
+                const highlightsList = document.getElementById('highlights-list');
+                highlightsList.innerHTML = project.highlights.map(h => `<li>${h}</li>`).join('');
+            } else {
+                videoWrapper.style.display = 'none';
+                highlightsWrapper.style.display = 'none';
+            }
 
             // Update actions
             const actionsContainer = document.getElementById('project-actions');
