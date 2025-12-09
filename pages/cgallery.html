@@ -1,156 +1,289 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>certificates</title>
-        <link rel="icon" type="image/png" href="/favicon_io/favicon-32x32.png"/>
-        <style type="text/css">
-            *{
-                box-sizing: border-box;
-            }
-            body{
-                background: #2e2727;
-                font-family: sans-serif;
-            }
-            .gallery{
-                border: 1px solid rgb(131, 35, 35);
-            }
-            .gallery img{
-                width: 100%;
-                height: auto;
-                border-radius: 4px;
-            }
-   
-            .gallery img:hover{
-                transform: scale(1.3,1.3);
-                transition: .3s transform;
-            }
-            .des{
-                padding: 15px;
-                text-align: center;
-                text-size-adjust: 20px;
-                background-color: cornsilk;
-            }
-            .responsive{
-                padding: 0 6px;
-                float: right;
-                width: 25%;
-            }
-            h1{
-                background-color: cornsilk;
-                text-align: center;
-            }
-            @media only screen and (max-width: 700px){
-                .responsive{
-                    width: 50%;
-                    margin: 6px 0;
-                }
-            }
-            @media only screen and (max-width: 700px){
-                .responsive{
-                    width: 100%;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Certificate Gallery</h1>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/Cloud.jpg" target="_blank"><img src="../certificates/Cloud.jpg" width="400" height="300"></a>
-                <div class="des">Introduction to Cloud</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/Docker.jpg" target="_blank"><img src="../certificates/Docker.jpg" width="400" height="300"></a>
-                <div class="des">Docker Essentials</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/Kubernetes.jpg" target="_blank"><img src="../certificates/Kubernetes.jpg" width="400" height="300"></a>
-                <div class="des">Kubernetes Essentials </div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/MySql.jpg" target="_blank"><img src="../certificates/MySql.jpg" width="400" height="300"></a>
-                <div class="des">MySql BootCamp</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/coursera1.jpg" target="_blank"><img src="../certificates/coursera1.jpg" width="400" height="300"></a>
-                <div class="des">Python Data Structures Coursera </div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/coursera2.jpg" target="_blank"><img src="../certificates/coursera2.jpg" width="400" height="300"></a>
-                <div class="des">Professional Communication Coursera</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/coursera3.jpg" target="_blank"><img src="../certificates/coursera3.jpg" width="400" height="300"></a>
-                <div class="des">TypeScript Control Structures Coursera</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/coursera.jpg" target="_blank"><img src="../certificates/coursera.jpg" width="400" height="300"></a>
-                <div class="des">Introduction to Python Programming Coursera</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/iot.jpg" target="_blank"><img src="../certificates/iot.jpg" width="400" height="300"></a>
-                <div class="des">Udemy Internet of Things Training</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/udemy2.jpg" target="_blank"><img src="../certificates/udemy2.jpg" width="400" height="300"></a>
-                <div class="des">Python Programming Udemy</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/udemy1.jpg" target="_blank"><img src="../certificates/udemy1.jpg" width="400" height="300"></a>
-                <div class="des">Introduction to Raspberry Pi Udemy</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/hackerrank.png" target="_blank"><img src="../certificates/hackerrank.png" width="400" height="300"></a>
-                <div class="des">Python Basics Certificatatin HackerRank</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/ieee.jpg" target="_blank"><img src="../certificates/ieee.jpg" width="400" height="300"></a>
-                <div class="des">Participation IEEE Webinar</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/devfest.jpg" target="_blank"><img src="../certificates/devfest.jpg" width="400" height="300"></a>
-                <div class="des">DevFest India 2021</div>
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/pathpartner.jpg" target="_blank"><img src="../certificates/pathpartner.jpg" width="400" height="300"></a>
-                <div class="des">DSP Training Pathpartner Technologies</div>
-            </div>
-        </div>
-        
-        <div class="responsive">
-            <div class="gallery">
-                <a href="../certificates/d2c.jpg" target="_blank"><img src="../certificates/d2c.jpg" width="400" height="300"></a>
-                <div class="des">D2C Event Participation</div>
-            </div>
-        </div>
-    </body>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates | Aryan Kumar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="/favicon_io/favicon-32x32.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="page-bg">
+        <div class="grid-overlay"></div>
+        <div class="gradient-orb gradient-orb-1"></div>
+        <div class="gradient-orb gradient-orb-2"></div>
+    </div>
 
+    <!-- Navigation -->
+    <nav class="page-nav">
+        <a href="../index.html#about" class="nav-back">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+        <span class="nav-title">Certificates</span>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="gallery-page">
+        <div class="container">
+            <!-- Header -->
+            <header class="gallery-header">
+                <h1 class="gallery-title">Certificate <span>Gallery</span></h1>
+                <p class="gallery-subtitle">A collection of my professional certifications and achievements</p>
+            </header>
+
+            <!-- Cloud & DevOps -->
+            <section class="cert-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h2 class="category-title">Cloud & DevOps</h2>
+                </div>
+                <div class="cert-gallery">
+                    <a href="../certificates/Cloud.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/Cloud.jpg" alt="Introduction to Cloud">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Introduction to Cloud</h3>
+                            <span class="cert-issuer"><i class="fas fa-building"></i> IBM</span>
+                        </div>
+                    </a>
+                    <a href="../certificates/Docker.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/Docker.jpg" alt="Docker Essentials">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Docker Essentials</h3>
+                            <span class="cert-issuer"><i class="fab fa-docker"></i> Docker</span>
+                        </div>
+                    </a>
+                    <a href="../certificates/Kubernetes.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/Kubernetes.jpg" alt="Kubernetes Essentials">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Kubernetes Essentials</h3>
+                            <span class="cert-issuer"><i class="fas fa-dharmachakra"></i> Linux Foundation</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Programming & Development -->
+            <section class="cert-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h2 class="category-title">Programming & Development</h2>
+                </div>
+                <div class="cert-gallery">
+                    <a href="../certificates/coursera.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/coursera.jpg" alt="Introduction to Python Programming">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Introduction to Python Programming</h3>
+                            <span class="cert-issuer"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        </div>
+                    </a>
+                    <a href="../certificates/coursera1.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/coursera1.jpg" alt="Python Data Structures">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Python Data Structures</h3>
+                            <span class="cert-issuer"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        </div>
+                    </a>
+                    <a href="../certificates/coursera3.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/coursera3.jpg" alt="TypeScript Control Structures">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">TypeScript Control Structures</h3>
+                            <span class="cert-issuer"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        </div>
+                    </a>
+                    <a href="../certificates/MySql.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/MySql.jpg" alt="MySQL BootCamp">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">MySQL BootCamp</h3>
+                            <span class="cert-issuer"><i class="fas fa-database"></i> Udemy</span>
+                        </div>
+                    </a>
+                    <a href="../certificates/udemy2.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/udemy2.jpg" alt="Python Programming">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Python Programming</h3>
+                            <span class="cert-issuer"><i class="fab fa-python"></i> Udemy</span>
+                        </div>
+                    </a>
+                    <a href="../certificates/hackerrank.png" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/hackerrank.png" alt="Python Basics Certification">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Python Basics Certification</h3>
+                            <span class="cert-issuer"><i class="fab fa-hackerrank"></i> HackerRank</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- IoT & Hardware -->
+            <section class="cert-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h2 class="category-title">IoT & Hardware</h2>
+                </div>
+                <div class="cert-gallery">
+                    <a href="../certificates/iot.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/iot.jpg" alt="Internet of Things Training">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Internet of Things Training</h3>
+                            <span class="cert-issuer"><i class="fas fa-laptop-code"></i> Udemy</span>
+                        </div>
+                    </a>
+                    <a href="../certificates/udemy1.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/udemy1.jpg" alt="Introduction to Raspberry Pi">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Introduction to Raspberry Pi</h3>
+                            <span class="cert-issuer"><i class="fas fa-microchip"></i> Udemy</span>
+                        </div>
+                    </a>
+                    <a href="../certificates/pathpartner.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/pathpartner.jpg" alt="DSP Training">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">DSP Training</h3>
+                            <span class="cert-issuer"><i class="fas fa-building"></i> Pathpartner Technologies</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Events & Participation -->
+            <section class="cert-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h2 class="category-title">Events & Participation</h2>
+                </div>
+                <div class="cert-gallery">
+                    <a href="../certificates/coursera2.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/coursera2.jpg" alt="Professional Communication">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">Professional Communication</h3>
+                            <span class="cert-issuer"><i class="fas fa-graduation-cap"></i> Coursera</span>
+                        </div>
+                    </a>
+                    <a href="../certificates/ieee.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/ieee.jpg" alt="IEEE Webinar Participation">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">IEEE Webinar Participation</h3>
+                            <span class="cert-issuer"><i class="fas fa-award"></i> IEEE</span>
+                        </div>
+                    </a>
+                    <a href="../certificates/devfest.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/devfest.jpg" alt="DevFest India 2021">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">DevFest India 2021</h3>
+                            <span class="cert-issuer"><i class="fab fa-google"></i> Google Developers</span>
+                        </div>
+                    </a>
+                    <a href="../certificates/d2c.jpg" target="_blank" class="cert-card">
+                        <div class="cert-image">
+                            <img src="../certificates/d2c.jpg" alt="D2C Event">
+                            <div class="cert-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-name">D2C Event Participation</h3>
+                            <span class="cert-issuer"><i class="fas fa-calendar-check"></i> D2C</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <p>&copy; 2025 Aryan Kumar. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Aryan Kumar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="/favicon_io/favicon-32x32.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="page-bg">
+        <div class="grid-overlay"></div>
+        <div class="gradient-orb gradient-orb-1"></div>
+        <div class="gradient-orb gradient-orb-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="page-nav">
+        <a href="../index.html#projects" class="nav-back">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+        <span class="nav-title">Project Details</span>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="project-page">
+        <div class="container">
+            <!-- Header -->
+            <header class="project-header">
+                <span class="project-badge" id="project-badge">
+                    <i class="fas fa-microchip" id="badge-icon"></i>
+                    <span id="badge-text">Project</span>
+                </span>
+                <h1 class="project-title" id="project-title">Project <span>Name</span></h1>
+                <p class="project-subtitle" id="project-subtitle">Project description goes here.</p>
+            </header>
+
+            <!-- Video -->
+            <section class="video-section">
+                <div class="video-wrapper">
+                    <video controls id="project-video">
+                        <source src="" type="video/mp4" id="video-source">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <!-- Actions -->
+            <div class="project-actions" id="project-actions">
+                <!-- Buttons will be injected by JS -->
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="tech-stack">
+                <h3>Technologies Used</h3>
+                <div class="tech-tags" id="tech-tags">
+                    <!-- Tags will be injected by JS -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <p>&copy; 2025 Aryan Kumar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Project data
+        const projects = {
+            'smart-parking': {
+                badge: { icon: 'fas fa-microchip', text: 'IoT Project' },
+                title: 'Smart Parking <span>System</span>',
+                subtitle: 'An IoT-based intelligent parking management solution that automates parking space detection and guidance for efficient urban mobility.',
+                video: '../videos/smartparkingsystem.mp4',
+                poster: '../images/smartparkingsystem.jpg',
+                actions: [
+                    { type: 'primary', icon: 'fas fa-file-pdf', text: 'View Report', url: '../pdf/p1report.pdf' },
+                    { type: 'secondary', icon: 'fab fa-github', text: 'Source Code', url: 'https://github.com/aryanboss/Smart-Parking-System' }
+                ],
+                tech: ['Arduino', 'IoT', 'Embedded Systems', 'Sensors', 'C++']
+            },
+            'sorting-visualizer': {
+                badge: { icon: 'fas fa-sort-amount-down', text: 'Algorithms' },
+                title: 'Sorting & Searching <span>Visualizer</span>',
+                subtitle: 'Interactive visualization of sorting and searching algorithms on an array of images, demonstrating algorithm efficiency and complexity.',
+                video: '../videos/sortingalgo.mp4',
+                poster: '../images/sorting.png',
+                actions: [
+                    { type: 'primary', icon: 'fas fa-file-pdf', text: 'View Report', url: '../pdf/p2report.pdf' },
+                    { type: 'secondary', icon: 'fab fa-github', text: 'Source Code', url: 'https://github.com/aryanboss/EC351_Project' }
+                ],
+                tech: ['Python', 'Algorithms', 'Data Structures', 'Visualization']
+            },
+            'mqtt-sensor': {
+                badge: { icon: 'fas fa-cloud', text: 'Cloud IoT' },
+                title: 'Temperature Sensor <span>Data Logger</span>',
+                subtitle: 'Real-time temperature monitoring system using MQTT protocol for cloud-based data logging and visualization.',
+                video: '../videos/tempsensor.mp4',
+                poster: '../images/mqtt.png',
+                actions: [
+                    { type: 'primary', icon: 'fas fa-file-alt', text: 'View Documentation', url: 'https://github.com/aryanboss/Zenatix_Assignment/blob/main/README.md' },
+                    { type: 'secondary', icon: 'fab fa-github', text: 'Source Code', url: 'https://github.com/aryanboss/Zenatix_Assignment' }
+                ],
+                tech: ['MQTT', 'IoT', 'Python', 'Cloud', 'Sensors']
+            },
+            'atlas-game': {
+                badge: { icon: 'fas fa-gamepad', text: 'Game Development' },
+                title: 'Game of <span>ATLAS</span>',
+                subtitle: 'A fun and interactive word game where players name countries, cities, or places starting with the last letter of the previous answer.',
+                video: '../videos/atlas.mp4',
+                poster: '../images/atlas.jpeg',
+                actions: [
+                    { type: 'primary', icon: 'fab fa-github', text: 'View on GitHub', url: 'https://github.com/aryanboss/Atlas-Game' }
+                ],
+                tech: ['Python', 'Game Logic', 'Data Processing']
+            },
+            'mini-bank': {
+                badge: { icon: 'fas fa-university', text: 'Banking System' },
+                title: 'Mini <span>Bank</span>',
+                subtitle: 'A comprehensive banking system simulation with account management, transactions, and balance tracking functionality.',
+                video: '../videos/minibank.mp4',
+                poster: '../images/minibank.jpeg',
+                actions: [
+                    { type: 'primary', icon: 'fab fa-github', text: 'View on GitHub', url: 'https://github.com/aryanboss/Mini-Bank' }
+                ],
+                tech: ['Python', 'SQL', 'Database', 'OOP']
+            }
+        };
+
+        // Get project ID from URL
+        function getProjectId() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id') || 'smart-parking';
+        }
+
+        // Load project data
+        function loadProject() {
+            const projectId = getProjectId();
+            const project = projects[projectId];
+
+            if (!project) {
+                window.location.href = '../index.html#projects';
+                return;
+            }
+
+            // Update page title
+            document.title = project.title.replace(/<[^>]*>/g, '') + ' | Aryan Kumar';
+
+            // Update badge
+            document.getElementById('badge-icon').className = project.badge.icon;
+            document.getElementById('badge-text').textContent = project.badge.text;
+
+            // Update title and subtitle
+            document.getElementById('project-title').innerHTML = project.title;
+            document.getElementById('project-subtitle').textContent = project.subtitle;
+
+            // Update video
+            const video = document.getElementById('project-video');
+            const videoSource = document.getElementById('video-source');
+            video.poster = project.poster;
+            videoSource.src = project.video;
+            video.load();
+
+            // Update actions
+            const actionsContainer = document.getElementById('project-actions');
+            actionsContainer.innerHTML = project.actions.map(action => `
+                <a href="${action.url}" target="_blank" class="btn btn-${action.type}">
+                    <i class="${action.icon}"></i>
+                    <span>${action.text}</span>
+                </a>
+            `).join('');
+
+            // Update tech tags
+            const techContainer = document.getElementById('tech-tags');
+            techContainer.innerHTML = project.tech.map(t => `
+                <span class="tech-tag">${t}</span>
+            `).join('');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', loadProject);
+    </script>
+</body>
+</html>
+
