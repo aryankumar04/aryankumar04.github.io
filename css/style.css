@@ -1132,17 +1132,18 @@ section {
 }
 
 .spark-proxy-bg {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #e25a1c 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
 }
 
-.spark-proxy-bg::after {
-    content: '⚡';
-    font-size: 6rem;
-    opacity: 0.3;
-    position: absolute;
+.spark-proxy-bg img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(226, 90, 28, 0.5));
 }
 
 .project-overlay i {
