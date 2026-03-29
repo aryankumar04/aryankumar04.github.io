@@ -23,5 +23,5 @@ Built with vanilla HTML, CSS, and JavaScript. No frameworks.
 
 ## License
 
-© 2025 Aryan Kumar
+© 2026 Aryan Kumar
 
